@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta property="og:title" content="코로나19 바이러스 관련 사전 설문조사" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <title>코로나19 바이러스 관련 사전 설문조사</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+   
+    <script type="text/javascript">
+		try {
+			window.addEventListener("load", function(){
+			  setTimeout(loaded, 100);
+			}, false);
+		} catch (e){}
+		
+		function loaded(){
+			window.scrollTo(0,1);
+		}
+	</script>
+</head>
+<body>
+<div id="wrap" class="container">
+    <div id="header">
+        <div class="title">개인 정보 입력</div>
+    </div>
+
+    <div id="survey_wrap">
+        <div class="survey_list">
+            <div class="visit_wrap">
+                <div class="visit_table_02">
+                    <div class="visit_title visit_title_02" style="margin-bottom: 5px;">개인정보</div>
+                    <div class="visit_pur_r">
+                        <div class="privacy" style="margin:2px 0 14px 0;">
+                            <span style="margin-right: 43px;">환자명</span>
+                            <input type="text" name="name" class="answerText form-control answerBox" id="name" value="홍길동" itemname="환자명" disabled/>
+                        </div>
+                        <div class="privacy" style="margin-bottom: 18px;">
+                            <span>주민등록번호</span>
+                            <input type="number" name="jumin1" class="answerText form-control answerBox2" id="jumin1" value="7900101" itemname="주민등록번호 앞자리" disabled/> -
+                            <input type="number" name="jumin2" class="answerText form-control answerBox2" id="jumin2" style="-webkit-text-security: disc; margin-left:0;" maxlength="7"
+                                   oninput="maxLengthCheck(this)" value="" pattern="[0-9]*" inputmode="numeric" itemname="주민등록번호 뒷자리"/>
+
+                        </div>
+                        <div class="privacy" style="margin-bottom: 18px;">
+                            <span style="margin-right: 43px;">연락처</span>
+                            <input type="number" name="phone" class="answerText form-control answerBox" id="phone" value="01012341234" itemname="연락처" disabled/>
+                        </div>
+                    </div>
+                </div>
+                <div class="line" style="width: 100%;"></div>
+
+                <div class="visit_table_01">
+                    <div class="visit_title">방문시간</div>
+                    <div class="time_wrap">
+                        <div class="time_sel_01 time_sel">
+                            <input type="radio" name="visitTime" id="time_01" value="오전" onclick="" questinfo=""/>
+                            <label for="time_01">오전</label>
+                        </div>
+                        <div class="time_sel_02 time_sel">
+                            <input type="radio" name="visitTime" id="time_02" value="오후" onclick="" questinfo=""/>
+                            <label for="time_02">오후</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="visit_table_02">
+                    <div class="visit_title visit_title_02">방문목적</div>
+                    <div class="visit_pur_r">
+                        <div class="pur_row_01 pur_row">
+                            <div class="pur_sel_01">
+                                <input type="radio" name="visitWhy" id="pur_01" value="1" onclick="" questinfo=""/>
+                                <label for="pur_01">진료</label>
+                            </div>
+
+                            <div class="pur_sub_wrap">
+                                <span style="-ms-grid-column:1;">(</span>
+                                <div class="pur_sub" style="-ms-grid-column:2;">
+                                    <input type="radio" name="visitPurpose1" id="pur_sub_01" value="외래" onclick="" questinfo="" disabled="true"/>
+                                    <label for="pur_sub_01">외래진료</label>
+                                </div>
+                                <div class="pur_sub" style="-ms-grid-column:3;">
+                                    <input type="radio" name="visitPurpose1" id="pur_sub_02" value="검사" onclick="" questinfo="" disabled="true"/>
+                                    <label for="pur_sub_02">검사</label>
+                                </div>
+                                <div class="pur_sub" style="-ms-grid-column:4;">
+                                    <input type="radio" name="visitPurpose1" id="pur_sub_03" value="입원" onclick="" questinfo="" disabled="true"/>
+                                    <label for="pur_sub_03">입원</label>
+                                </div>
+                                <span style="-ms-grid-column:5; display: inline-block;">)</span>
+                            </div>
+
+                        </div>
+                        <div class="pur_row_02 pur_row">
+                            <div class="pur_sel_02">
+                                <input type="radio" name="visitWhy" id="pur_02" value="2" onclick="" questinfo=""/>
+                                <label for="pur_02">입원환자 병문안</label>
+                            </div>
+                            <div class="pur_sel_t" style="text-align: right;">
+                                <span>환자명</span>
+                                <input type="text" name="visitPurpose2" class="answerText form-control answerBox" id="visitPurpose2" itemname="환자명" disabled="true"/>
+                            </div>
+                        </div>
+                        <div class="pur_row_03 pur_row">
+                            <div class="pur_sel_03">
+                                <input type="radio" name="visitWhy" id="pur_03" value="3" onclick="" questinfo=""/>
+                                <label for="pur_03">기타</label>
+                            </div>
+                            <div class="pur_sel_t" style="text-align: right;">
+                                <span>사유</span>
+                                <input type="text" name="visitPurpose3" class="answerText form-control answerBox" id="visitPurpose3" itemname="사유" disabled="true"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <input type="button" value="다음" id="btnSave" onclick="location.href='survey.html'" class="btn-next" style="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function maxLengthCheck(object) {
+            if (object.value.length > object.maxLength) {
+                object.value = object.value.slice(0, object.maxLength);
+            }
+        }
+
+        function next() {
+
+            var url = "/survey/complete";
+            var $form = createForm(url, "sendForm");
+            $form.appendTo("body");
+
+            var $name = createInput("name", $("#name").val());
+            var $jumin = createInput("jumin", $("#jumin1").val()+$("#jumin2").val());
+            var $phone = createInput("phone", $("#phone").val());
+            var $visitTime = createInput("visitTime", $(':radio[name="visitTime"]:checked').val());
+
+            var visitWhyFlag = $(':radio[name="visitWhy"]:checked').val();
+            var $visitWhy;
+            var $visitPurpose;
+            if(visitWhyFlag === "1"){
+                $visitWhy = createInput("visitWhy", "진료");
+                $visitPurpose = createInput("visitPurpose", $(':radio[name="visitPurpose1"]:checked').val());
+            } else if(visitWhyFlag === "2"){
+                $visitWhy = createInput("visitWhy", "보호자");
+                $visitPurpose = createInput("visitPurpose", $(':text[name="visitPurpose2"]').val());
+            } else if(visitWhyFlag === "3"){
+                $visitWhy = createInput("visitWhy", "기타");
+                $visitPurpose = createInput("visitPurpose", $(':text[name="visitPurpose3"]').val());
+            }
+
+            var q1 = $(':radio[name="quest_1"]:checked').val();
+            var q2 = $(':radio[name="quest_2"]:checked').val();
+            if(q2 === "O"){
+                q2 = q2 + "|" + $(':text[name="quest_02_t"]').val();
+
+            }
+
+            var q3 = $(':radio[name="quest_3"]:checked').val();
+            if(q3 === "O"){
+                q3 = q3 + "|" + $(':text[name="quest_03_t"]').val();
+
+            }
+
+            var q4 = $(':radio[name="quest_4"]:checked').val();
+            if(q4 === "O"){
+                q4 = q4 + "|" + $(':text[name="quest_04_t"]').val();
+
+            }
+
+            var questionInfo1 = {code:"Q001", answer:q1};
+            var questionInfo2 = {code:"Q002", answer:q2};
+            var questionInfo3 = {code:"Q003", answer:q3};
+            var questionInfo4 = {code:"Q004", answer:q4};
+
+
+            var $questionInfoCode1 = createInput("questionInfoList[0].code", "Q001");
+            var $questionInfoAnswer1 = createInput("questionInfoList[0].answer", q1);
+
+            var $questionInfoCode2 = createInput("questionInfoList[1].code", "Q002");
+            var $questionInfoAnswer2 = createInput("questionInfoList[1].answer", q2);
+            var $questionInfoCode3 = createInput("questionInfoList[2].code", "Q003");
+            var $questionInfoAnswer3 = createInput("questionInfoList[2].answer", q3);
+            var $questionInfoCode4 = createInput("questionInfoList[3].code", "Q004");
+            var $questionInfoAnswer4 = createInput("questionInfoList[3].answer", q4);
+
+            // console.log("$questionInfoList ", $questionInfoList1);
+
+            // alert($questionInfoList);
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            $form.append($name)
+                    .append($jumin)
+                    .append($phone)
+                    .append($visitTime)
+                    .append($visitWhy)
+                    .append($visitPurpose)
+                    .append($questionInfoCode1)
+                    .append($questionInfoAnswer1)
+                    .append($questionInfoCode2)
+                    .append($questionInfoAnswer2)
+                    .append($questionInfoCode3)
+                    .append($questionInfoAnswer3)
+                    .append($questionInfoCode4)
+                    .append($questionInfoAnswer4);
+
+            $form.submit();
+        }
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta property="og:title" content="코로나19 바이러스 관련 사전 설문조사" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <title>코로나19 바이러스 관련 사전 설문조사</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+   
+    <script type="text/javascript">
+		try {
+			window.addEventListener("load", function(){
+			  setTimeout(loaded, 100);
+			}, false);
+		} catch (e){}
+		
+		function loaded(){
+			window.scrollTo(0,1);
+		}
+	</script>
+</head>
+<body>
+<div id="wrap" class="container">
+    <div id="header">
+        <div class="title">신종 코로나 바이러스 감염증 문진표</div>
+    </div>
+
+    <div id="survey_wrap">
+        <div class="survey_list">
+            <div class="info_wrap">
+                <div class="info" style="text-align: center;">
+                    <span style="font-size: 14px; padding-bottom: 13px; display: inline-block;text-align: center;">『감염병 예방 및 관리에 관한 법률』 제35조의2,<br>제 83조에 의거, 고의적으로 사실을 누락·은폐하는 경우,<br>1천만원 이하의 과태료가 부가될 수 있습니다.</span>
+                </div>
+            </div>
+            <div class="line_2"></div>
+
+            <div class="survey_quest" id="quest_01">
+                <div class="quest">
+                    <div class="order">01</div>
+                    <div class="q_text">
+                        <p>최근 2주(14일) 이내에 코로나바이러스감염증-19 확진자와 접촉 하시거나 국가기관으로부터 접촉 안내를 받으셨습니까?</p>
+                        <span class="required">*필수 응답 문항</span>
+                    </div>
+                </div>
+
+                <div class="answer-area clearfix answer-radio container-fluid">
+                    <div class="answer radio col-xs-15 col-sm-10">
+                        <div class="order">
+                            <input type="radio" name="quest_1" id="quest_01_1" value="O" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_01_1">
+                                예
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_1" id="quest_01_2" value="X" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_01_2">
+                                아니오
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div class="survey_quest" id="quest_02">
+                <div class="quest">
+                    <div class="order">02</div>
+                    <div class="q_text">
+                        <p>최근 2주(14일) 이내에 해외를 방문하셨습니까?<br>(예: 중국, 홍콩, 마카오, 대만, 싱가폴, 일본, 태국, 말레이시아, 베트남, 등)</p>
+                        <span class="required">*필수 응답 문항</span>
+                    </div>
+                </div>
+
+                <div class="answer-area clearfix answer-radio">
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_2" id="quest_02_1" value="O" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_02_1">
+                                예
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-15 col-md-10" style="text-align: right;">
+                        <span>방문지역</span>
+                        <input type="text" name="quest_02_t" class="answerText form-control answerBox" id="quest_02_t" itemname="1번 문항" disabled="true"/>
+                    </div>
+
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_2" id="quest_02_2" value="X" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_02_2">
+                                아니요
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div class="survey_quest" id="quest_03">
+                <div class="quest">
+                    <div class="order">03</div>
+                    <div class="q_text">
+                        <p>최근 2주(14일) 이내에 국내 대규모 발생지역을 방문하셨습니까?<br>(예: 대구 등)</p>
+                        <span class="required">*필수 응답 문항</span>
+                    </div>
+                </div>
+                <div class="answer-area clearfix answer-radio">
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_3" id="quest_03_1" value="O" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_03_1">
+                                예
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-15 col-md-10" style="text-align: right;">
+                        <span>방문지역</span>
+                        <input type="text" name="quest_03_t" class="answerText form-control answerBox" id="quest_03_t" itemname="1번 문항" disabled="true"/>
+                    </div>
+
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_3" id="quest_03_2" value="X" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_03_2">
+                                아니오
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div class="survey_quest" id="quest_04">
+                <div class="quest">
+                    <div class="order">04</div>
+                    <div class="q_text">
+                        <p>현재 호흡기 증상이 있습니까?<br>(예: 발열(37.5℃이상), 해열제 복용, 기침, 근육통(몸살감기), 가래, 인후통, 호흡곤란, 기타 호흡기 증상)</p>
+                        <span class="required">*필수 응답 문항</span>
+                    </div>
+                </div>
+                <div class="answer-area clearfix answer-radio">
+                    <div class="answer radio col-xs-15 col-sm-10">
+                        <div class="order">
+                            <input type="radio" name="quest_4" id="quest_04_1" value="O" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_04_1">
+                                예
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-15 col-md-10" style="text-align: right;">
+                        <span>증상</span>
+                        <input type="text" name="quest_04_t" class="answerText form-control answerBox" id="quest_04_t" itemname="4번 문항" disabled="true"/>
+                    </div>
+
+                    <div class="answer radio">
+                        <div class="order">
+                            <input type="radio" name="quest_4" id="quest_04_2" value="X" onclick="" questinfo=""/>
+                        </div>
+                        <div class="q_text">
+                            <label for="quest_04_2">
+                                아니오
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line_2"></div>
+
+            <div class="info_wrap">
+                <div class="info">
+                    <span style="font-size: 14px; padding-top:7px ; padding-bottom: 50px; display: inline-block;text-align: center;">※ [작성완료] 버튼을 누르실 경우 해당 문진표를 병원에 제출할 수 있도록 암호화된 QRCode가 생성됩니다.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <input type="button" value="작성완료" id="btnSave" onclick="location.href='complete.html'" class="btn-next" style="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function maxLengthCheck(object) {
+            if (object.value.length > object.maxLength) {
+                object.value = object.value.slice(0, object.maxLength);
+            }
+        }
+
+        function next() {
+
+            var url = "/survey/complete";
+            var $form = createForm(url, "sendForm");
+            $form.appendTo("body");
+
+            var $name = createInput("name", $("#name").val());
+            var $jumin = createInput("jumin", $("#jumin1").val()+$("#jumin2").val());
+            var $phone = createInput("phone", $("#phone").val());
+            var $visitTime = createInput("visitTime", $(':radio[name="visitTime"]:checked').val());
+
+            var visitWhyFlag = $(':radio[name="visitWhy"]:checked').val();
+            var $visitWhy;
+            var $visitPurpose;
+            if(visitWhyFlag === "1"){
+                $visitWhy = createInput("visitWhy", "진료");
+                $visitPurpose = createInput("visitPurpose", $(':radio[name="visitPurpose1"]:checked').val());
+            } else if(visitWhyFlag === "2"){
+                $visitWhy = createInput("visitWhy", "보호자");
+                $visitPurpose = createInput("visitPurpose", $(':text[name="visitPurpose2"]').val());
+            } else if(visitWhyFlag === "3"){
+                $visitWhy = createInput("visitWhy", "기타");
+                $visitPurpose = createInput("visitPurpose", $(':text[name="visitPurpose3"]').val());
+            }
+
+            var q1 = $(':radio[name="quest_1"]:checked').val();
+            var q2 = $(':radio[name="quest_2"]:checked').val();
+            if(q2 === "O"){
+                q2 = q2 + "|" + $(':text[name="quest_02_t"]').val();
+
+            }
+
+            var q3 = $(':radio[name="quest_3"]:checked').val();
+            if(q3 === "O"){
+                q3 = q3 + "|" + $(':text[name="quest_03_t"]').val();
+
+            }
+
+            var q4 = $(':radio[name="quest_4"]:checked').val();
+            if(q4 === "O"){
+                q4 = q4 + "|" + $(':text[name="quest_04_t"]').val();
+
+            }
+
+            var questionInfo1 = {code:"Q001", answer:q1};
+            var questionInfo2 = {code:"Q002", answer:q2};
+            var questionInfo3 = {code:"Q003", answer:q3};
+            var questionInfo4 = {code:"Q004", answer:q4};
+
+
+            var $questionInfoCode1 = createInput("questionInfoList[0].code", "Q001");
+            var $questionInfoAnswer1 = createInput("questionInfoList[0].answer", q1);
+
+            var $questionInfoCode2 = createInput("questionInfoList[1].code", "Q002");
+            var $questionInfoAnswer2 = createInput("questionInfoList[1].answer", q2);
+            var $questionInfoCode3 = createInput("questionInfoList[2].code", "Q003");
+            var $questionInfoAnswer3 = createInput("questionInfoList[2].answer", q3);
+            var $questionInfoCode4 = createInput("questionInfoList[3].code", "Q004");
+            var $questionInfoAnswer4 = createInput("questionInfoList[3].answer", q4);
+
+            // console.log("$questionInfoList ", $questionInfoList1);
+
+            // alert($questionInfoList);
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            $form.append($name)
+                    .append($jumin)
+                    .append($phone)
+                    .append($visitTime)
+                    .append($visitWhy)
+                    .append($visitPurpose)
+                    .append($questionInfoCode1)
+                    .append($questionInfoAnswer1)
+                    .append($questionInfoCode2)
+                    .append($questionInfoAnswer2)
+                    .append($questionInfoCode3)
+                    .append($questionInfoAnswer3)
+                    .append($questionInfoCode4)
+                    .append($questionInfoAnswer4);
+
+            $form.submit();
+        }
+    </script>
+
+</div>
+</body>
+</html>

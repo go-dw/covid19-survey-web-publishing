@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta property="og:title" content="코로나19 바이러스 관련 사전 설문조사" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <title>코로나19 바이러스 관련 사전 설문조사</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/qrcode.min.js"></script>
+   
+    <script type="text/javascript">
+		try {
+			window.addEventListener("load", function(){
+			  setTimeout(loaded, 100);
+			}, false);
+		} catch (e){}
+		
+		function loaded(){
+			window.scrollTo(0,1);
+		}
+	</script>
+	<style type="text/css">
+		.footer	.btn-next { background-color:#1455cc; width: 100%; height: 100%; border-radius: 0; }
+		.footer .container .clearfix{
+			padding: 0;height: 94px;
+		}
+	</style>
+</head>
+<body style="margin-bottom: 0;">
+<!-- <body oncontextmenu="return false" onselectstart="return false" ondragstart='return false'> -->
+	<div id="wrap" class="container" style="height: 100vh; background-color: #585858; overflow: hidden;">
+		<div class="text_area qr_area">
+			<div class="qr_wrap">
+				<p class="qr_title">설문완료 QR코드</p>
+				<div class="qr_row">
+					<div class="qr_content">
+						<div class="qr_bg">
+							<div class="qr_code" id="qr_code">
+							</div>
+						</div>
+						<p class="qr_guide">해당 화면을 병원 입구 보안 담당자에게<br> 제출하여 주시기 바랍니다.</p>
+					</div>
+				</div>
+				<p class="qr_guide_2">
+					*본 확인증은 발급 당일에 한해 유효합니다.
+				</p>
+			</div>
+		</div>		
+	</div>
+	<input type="hidden" id="encKey" value="4C+xcT9FoVCzsVgSs9o5f5zb1VNFRyT83YdqUPw13o6OIhz400UaaOew35INoCff22RklQFTkwD2NKZGFfL98FLTFU+IXmLx5QX/sF+UasV3M0GNnkmBpBuH6V/ioUDpg2hSUPQai4zfsa4Pdrj5SLcf8o/fdB240PD0hCgZBzKf7QZ4lGHJZZLp88fCCbLMqJzqczvJKX6Deff689QuJtAmStaA0jGgVd6iUe7HlD+uFIax46vlqBs0zFxPAIt5Qf1YxN5mGCOWlqIeNQ40xkrdoNlb3kRIreNvLnPawnmdY/drfPRecCWSNAMjTAX2Q1AT0pOTrEgxTg7mzYcAkgIACHwM6MtqYZDeUJUtZLf74AfLwhxFMIgxPjl9pPZe6IU0oMklXrXPMPb7+6VcmLyrf/VUtsJd4XO9DiLjFyEr8=" />
+<script>
+    $(function () {
+        var w = screen.width;
+
+        var size = 318;
+
+        if((w-318)<40){
+            size = w-70;
+        }
+
+        var qrcode = new QRCode(document.getElementById("qr_code"), {
+            width: size,
+            height: size
+        });
+
+        qrcode.makeCode($("#encKey").val());
+
+
+        setTimeout(removeImgStyle, 300);
+    });
+
+    function removeImgStyle() {
+        $("img").removeAttr("style");
+    }
+
+</script>	
+</body>
+</html>
